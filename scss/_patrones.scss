@@ -1,0 +1,93 @@
+/*Páginas: Index - Patrones Diseño */
+
+@mixin text-align {
+    text-align: center;
+}
+
+.div-presentacion {
+    /* Para acomodar los elementos de diferentes maneras */
+    display: flex;
+
+    /* Dirección de los elementos: Vertical - Apilados */
+    flex-direction: column;
+
+    /* Alinea los elementos en la parte de abajo */
+    justify-content: flex-end;
+
+    /* Centrar los elementos */
+    @include text-align;
+    border: 2px solid $color-verde;
+    padding: 5px;
+    margin: 20px 40px;
+    width: 300px;
+    height: 280px;
+
+    h1 {
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: $color-verde;
+        font-size: 35px;
+    }
+
+    img {
+        /* Ajusta el tamaño al div, para que no se extienda más allá del ancho del div */
+        max-width: 100%;
+
+        /* Para ajustar la altura, para mantener la medida orignal */
+        height: auto;
+
+        /* Alinear la imagen en la parte de abajo del contenedor div */
+        align-self: flex-end;
+    }
+}
+
+.div-informacion {
+    a {
+        color: $color-naranja;
+        text-decoration: underline;
+        transition: color 1s;
+
+        &:hover {
+            color: $color-verde;
+        }
+    }
+
+    width: 850px;
+    height: auto;
+    font-size: 18px;
+
+    p {
+        padding-top: 25px;
+    }
+}
+
+.div-formulario {
+    /* Arriba - Derecha - Abajo -Izquierda */
+    margin: 0px 10px 30px 40px;
+
+    h2 {
+        color: $color-naranja
+    }
+
+    input {
+        &[type="email"] {
+            background-color: $color-verde-claro;
+            @include text-align;
+            border: 2px solid $color-verde;
+            border-radius: 3px;
+            width: 300px;
+            height: 25px;
+            margin-right: 24px;
+        }
+
+        &[type="submit"] {
+            background-color: $color-naranja;
+            color: $color-blanco;
+            @include text-align;
+            border: 3px solid $color-naranja;
+            border-radius: 8px;
+            width: 120px;
+            height: 26px;
+        }
+    }
+}

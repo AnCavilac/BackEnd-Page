@@ -1,0 +1,68 @@
+/* Estilos del header */
+
+@mixin enlace-decorado {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+@mixin display-block{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin display-inline-list {
+  display: inline-block;
+  list-style: none;
+}
+
+.img-logopython {
+  width: 50px;
+  margin-left: 15px;
+}
+
+/* Estilos de los enlaces */
+
+a {
+  @include enlace-decorado;
+  color: $color-negro;
+  transition: color 1s;
+
+  &:hover {
+    color: $color-naranja;
+  }
+}
+
+/* Estilos de la imagen y la navegación en el header */
+
+header img {
+  @include display-block;
+  margin: 5px;
+}
+
+nav {
+  @include display-block;
+  margin: 5px;
+
+  ul li {
+    @include display-inline-list;
+
+    /* Margen 0 Arr y Aba - 10px Izq y Der */
+    margin: 0 15px;
+  }
+}
+
+/* Estilos de la lista de navegación */
+
+hr {
+  border: none;
+  border-top: 3px solid $color-verde;
+  margin-bottom: 20px;
+  /* Agrega la transición para cambiar el color en 1 segundo */
+  transition: border-color 1s;
+
+  &:hover {
+    border-color: $color-naranja;
+  }
+}
+

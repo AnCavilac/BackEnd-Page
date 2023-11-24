@@ -1,0 +1,59 @@
+/* Página Patrones Creacionales - Estructurales - Comportamiento */
+@mixin cuadros {
+    padding: 5px;
+    border: 2px solid $color-gris-pros;
+    border-radius: 3px;
+}
+
+.main-patron {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-principal {
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        color: $color-verde;
+        font-size: 35px;
+    }
+
+    img {
+        border: 2px solid $color-gris-linear;
+        border-radius: 5px;
+    }
+}
+
+.div-proposito {
+    background-color: $color-blanco;
+    height: auto;
+    padding: 5px;
+    border: 2px solid $color-gris-oscuro;
+    border-radius: 5px;
+}
+
+.div-pros {
+    @include cuadros;
+}
+
+.div-contras {
+    @include cuadros;
+}
+
+.iframe-video {
+    border: 3px solid $color-naranja;
+    border-radius: 2px;
+    align-items: center;
+    margin-bottom: 5px;
+    // Tiempo de la animación
+    transition: transform 1s, box-shadow 1s;
+
+    &:hover {
+        // Agrandar video
+        transform: scale(1.05);
+
+        // Agregar sombra gris
+        box-shadow: 0 0 10px $color-gris-oscuro;
+    }
+}

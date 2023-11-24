@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* Importación tipo de letra Roboto - Thin */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: #FFFFFF; */
+  font-family: "Roboto", sans-serif;
+}
+
+/* Estilos del header */
+.img-logopython {
+  width: 50px;
+  margin-left: 15px;
+}
+
+/* Estilos de los enlaces */
+a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+  color: #000;
+  transition: color 1s;
+}
+a:hover {
+  color: #F35E08;
+}
+
+/* Estilos de la imagen y la navegación en el header */
+header img {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+nav {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  /* Margen 0 Arr y Aba - 10px Izq y Der */
+  margin: 0 15px;
+}
+
+/* Estilos de la lista de navegación */
+hr {
+  border: none;
+  border-top: 3px solid #00BF63;
+  margin-bottom: 20px;
+  /* Agrega la transición para cambiar el color en 1 segundo */
+  transition: border-color 1s;
+}
+hr:hover {
+  border-color: #F35E08;
+}
+
+/*Páginas: Index - Patrones Diseño */
+.div-presentacion {
+  /* Para acomodar los elementos de diferentes maneras */
+  display: flex;
+  /* Dirección de los elementos: Vertical - Apilados */
+  flex-direction: column;
+  /* Alinea los elementos en la parte de abajo */
+  justify-content: flex-end;
+  /* Centrar los elementos */
+  text-align: center;
+  border: 2px solid #00BF63;
+  padding: 5px;
+  margin: 20px 40px;
+  width: 300px;
+  height: 280px;
+}
+.div-presentacion h1 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #00BF63;
+  font-size: 35px;
+}
+.div-presentacion img {
+  /* Ajusta el tamaño al div, para que no se extienda más allá del ancho del div */
+  max-width: 100%;
+  /* Para ajustar la altura, para mantener la medida orignal */
+  height: auto;
+  /* Alinear la imagen en la parte de abajo del contenedor div */
+  align-self: flex-end;
+}
+
+.div-informacion {
+  width: 850px;
+  height: auto;
+  font-size: 18px;
+}
+.div-informacion a {
+  color: #F35E08;
+  text-decoration: underline;
+  transition: color 1s;
+}
+.div-informacion a:hover {
+  color: #00BF63;
+}
+.div-informacion p {
+  padding-top: 25px;
+}
+
+.div-formulario {
+  /* Arriba - Derecha - Abajo -Izquierda */
+  margin: 0px 10px 30px 40px;
+}
+.div-formulario h2 {
+  color: #F35E08;
+}
+.div-formulario input[type=email] {
+  background-color: rgba(0, 191, 99, 0.5019607843);
+  text-align: center;
+  border: 2px solid #00BF63;
+  border-radius: 3px;
+  width: 300px;
+  height: 25px;
+  margin-right: 24px;
+}
+.div-formulario input[type=submit] {
+  background-color: #F35E08;
+  color: #f5f3f3;
+  text-align: center;
+  border: 3px solid #F35E08;
+  border-radius: 8px;
+  width: 120px;
+  height: 26px;
+}
+
+/* Página Patrones Creacionales - Estructurales - Comportamiento */
+.main-patron {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div-principal h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #00BF63;
+  font-size: 35px;
+}
+.div-principal img {
+  border: 2px solid #c0b3b3;
+  border-radius: 5px;
+}
+
+.div-proposito {
+  background-color: #f5f3f3;
+  height: auto;
+  padding: 5px;
+  border: 2px solid #808080;
+  border-radius: 5px;
+}
+
+.div-pros {
+  padding: 5px;
+  border: 2px solid #b2a9a9;
+  border-radius: 3px;
+}
+
+.div-contras {
+  padding: 5px;
+  border: 2px solid #b2a9a9;
+  border-radius: 3px;
+}
+
+.iframe-video {
+  border: 3px solid #F35E08;
+  border-radius: 2px;
+  align-items: center;
+  margin-bottom: 5px;
+  transition: transform 1s, box-shadow 1s;
+}
+.iframe-video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #808080;
+}
+
+footer {
+  text-align: center;
+  /* Centra el contenido dentro del footer */
+  margin-top: 15px;
+}
+footer img {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=estilo.css.map */

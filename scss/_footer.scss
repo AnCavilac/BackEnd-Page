@@ -1,0 +1,23 @@
+@mixin margin-top {
+    margin-top: 15px;
+}
+
+@mixin margin-botoom {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+
+    /* Centra el contenido dentro del footer */
+    @include margin-top;
+
+    img {
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+
+        padding: 5px;
+        @include margin-botoom;
+    }
+}
